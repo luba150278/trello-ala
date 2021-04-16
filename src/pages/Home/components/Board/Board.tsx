@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useActions } from '../../../../hooks/useActions';
 import { useTypeSelector } from '../../../../hooks/useTypeSelector';
 import { IBoard } from '../../../../interfaces/board';
@@ -65,9 +66,9 @@ const Board: React.FC = () => {
         <h1>Boards</h1>
         <div className="row">
           {boardsObj.map((board) => (
-            <div key={board.id} className="card col-md-3 mx-2">
+            <Link to={`/board/${board.id}`} key={board.id} className="card col-md-3 mx-2 mb-2">
               {board.title}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

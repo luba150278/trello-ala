@@ -10,9 +10,9 @@ export interface BoardState {
   error: null | string;
 }
 export enum BoardActionTypes {
-  FETCH_BOARD = 'FETCH_BOARD ',
-  FETCH_BOARD_SUCCESS = 'FETCH_BOARD _SUCCESS',
-  FETCH_BOARD_ERROR = 'FETCH_BOARD _ERROR',
+  FETCH_BOARD = 'FETCH_BOARD',
+  FETCH_BOARD_SUCCESS = 'FETCH_BOARD_SUCCESS',
+  FETCH_BOARD_ERROR = 'FETCH_BOARD_ERROR',
 }
 
 interface FetchBoardAction {
@@ -20,7 +20,7 @@ interface FetchBoardAction {
 }
 interface FetchBoardSuccessAction {
   type: BoardActionTypes.FETCH_BOARD_SUCCESS;
-  payload: any[];
+  payload: IBoard[];
 }
 interface FetchBoardErrorAction {
   type: BoardActionTypes.FETCH_BOARD_ERROR;

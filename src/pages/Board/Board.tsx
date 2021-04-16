@@ -55,9 +55,7 @@ function Board({ match }: RouteComponentProps<TParams>): JSX.Element {
   return (
     <>
       <div className="board-header">
-        <h1>
-          {list?.title}: {match.params.id}
-        </h1>
+        <h1>Boards Number: {match.params.id}</h1>
         <button className="btn btn-add-board mt-2">Add List</button>
       </div>
       <div className="cards">{items}</div>

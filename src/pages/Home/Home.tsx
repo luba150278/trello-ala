@@ -8,8 +8,14 @@ const Main: React.FC = () => (
       <Link className="board-title mr-4" to="/user">
         Users
       </Link>
-      <Link className="board-title" to="/todo">
+      <Link className="board-title mr-4" to="/todo">
         ToDo
+      </Link>
+      <Link className="board-title mr-4" to="/boardCreate">
+        Add Board
+      </Link>
+      <Link className="board-title" to="/userCreate">
+        Add User
       </Link>
     </div>
     <div className="container">

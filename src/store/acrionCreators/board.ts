@@ -7,6 +7,7 @@ export const fetchBoards = () => async (dispatch: Dispatch<BoardAction>): Promis
     dispatch({ type: BoardActionTypes.FETCH_BOARD });
     const response = await axios.get('https://trello-back.shpp.me/lmyetolkina/api/v1/board', {
       headers: {
+        'Content-Type': 'application/json',
         Authorization: 'Bearer 123',
       },
     });

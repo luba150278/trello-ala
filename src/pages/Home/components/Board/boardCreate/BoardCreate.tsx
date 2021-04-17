@@ -40,13 +40,10 @@ const BoardCreate: React.FC = () => {
         className="btn btn-success mr-2"
         onClick={async (): Promise<Response> => {
           console.log(newBoard);
-          return axios.post('https://trello-back.shpp.me/lmyetolkina/api/v1/board', {
+          return axios.post('https://trello-back.shpp.me/lmyetolkina/api/v1/board', newBoard, {
             headers: {
               'Content-Type': 'application/json',
               Authorization: 'Bearer 123',
-            },
-            body: {
-              newBoard,
             },
           });
         }}

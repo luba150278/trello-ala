@@ -59,6 +59,7 @@ const Board: React.FC = () => {
   if (error) {
     return <h1>{error}</h1>;
   }
+  // boards.boards
   const boardsObj = getBoards(boards);
   if (boardsObj.length > 0) {
     return (
